@@ -12,9 +12,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use('/public', express.static(__dirname + "/public"));
+app.use('/public/converted_files',express.static(__dirname + '/public/converted_files'));      
 
 
 // app.use('/public/uploads',express.static(__dirname + '/public/uploads'));      
+
 
 
 
