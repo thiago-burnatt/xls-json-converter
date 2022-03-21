@@ -1,0 +1,12 @@
+<%- include('includes/head'); %>
+
+    <section class="container">
+        <h1>Click in the link below to donwload the converted file</h1>
+        <div class="download-div">
+             <a href="public/converted_files/<%= outputFilename %>" onclick="location.href = '/thanks'"
+                download="<%= outputFilename %>" class="download"><img src="/public/img/download-icon.png"></a>
+
+        </div>
+    </section>
+
+    <%- include('includes/footer'); %>

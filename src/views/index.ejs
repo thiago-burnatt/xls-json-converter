@@ -1,0 +1,17 @@
+<%- include('includes/head'); %>
+
+  <section class="container">
+
+    <%- include ('includes/messages')%>
+    
+    <h1>XLS / JSON conversor</h1>
+          <form action="/download/?_csrf=<%=csrfToken%>" method="POST" 
+          enctype="multipart/form-data" class="send-file">
+            <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+            <label>Please select a file</label>
+            <input type="file" name="file" id="file">
+            <button class="submit-btn">Convert</button>
+          </form>
+  </section>
+
+  <%- include('includes/footer'); %>
