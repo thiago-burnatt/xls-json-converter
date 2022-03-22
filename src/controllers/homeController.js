@@ -23,7 +23,7 @@ exports.fileConversion = (req, res) => {
         node_xj(
             {
                 input: `./public/uploads/${filename}`,
-                output: `./public/converted_files/${outputFilename}`,
+                output: `./public/converted/${outputFilename}`,
                 allowEmptyKey: false,
             },
             function (err, result) {
@@ -38,7 +38,7 @@ exports.fileConversion = (req, res) => {
 
     converter();
 
-
-    res.render('downloadPage', { filename, outputFilename });
+    setTimeout(() => {res.render('downloadPage', { outputFilename });}, 500)
+    
 
 }

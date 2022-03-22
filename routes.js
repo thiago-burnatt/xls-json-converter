@@ -6,9 +6,8 @@ const downloadController = require('./src/controllers/downloadController');
 
 // Rotas da home
 route.get('/',homeController.homePage); // Não executa a função
-route.post('/download', multerConfig, homeController.fileConversion);
+route.post('/', multerConfig, homeController.fileConversion);
 
-route.get('/thanks', downloadController.downloadIndex); // Não executa a função
-
+route.get('/thanks', downloadController.downloadIndex);
 
 module.exports = route;

@@ -12,13 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use('/public', express.static(__dirname + "/public"));
-app.use('/converted_files',express.static(__dirname + '/public/converted_files'));      
+// app.use('/converted_files',express.static(__dirname + '/public/converted_files'));      
 
 
-// app.use('/public/uploads',express.static(__dirname + '/public/uploads'));      
-
-
-
+// app.use('/public/converted_files',express.static(__dirname + '/public/'));      
 
 const sessionOptions = session({
   secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
