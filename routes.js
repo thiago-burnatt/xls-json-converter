@@ -6,7 +6,7 @@ const downloadController = require('./src/controllers/downloadController');
 
 // Rotas da home
 route.get('/',homeController.homePage);
-route.post('/download', multerConfig, homeController.fileConversion);
+route.post('/download/', multerConfig, homeController.fileConversion);
 
 route.get('/thanks', downloadController.downloadIndex);
 
