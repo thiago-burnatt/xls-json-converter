@@ -1,4 +1,4 @@
-# XLS-JSON-Converter
+# XLS-JSON Converter
 A web tool which easily converts XLS files into JSON.
 
 # Functionalities
