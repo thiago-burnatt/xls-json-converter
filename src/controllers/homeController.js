@@ -1,4 +1,3 @@
-const res = require("express/lib/response");
 const node_xj = require("xls-to-json");
 
 exports.homePage = (req, res) => {
@@ -28,17 +27,13 @@ exports.fileConversion = (req, res) => {
             },
             function (err, result) {
                 if (err) {
-                    console.log(err);
+                    req.flash('error', 'An error occurred, please try again')
                 } else {
-                    console.log(result);
+                    res.render('downloadPage', { outputFilename })
                 }
             }
         )
     }
 
-    converter();
-
-    setTimeout(() => {res.render('downloadPage', { outputFilename });}, 500)
-    
-
+    converter();    
 }
